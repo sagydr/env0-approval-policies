@@ -15,4 +15,11 @@ allow[format(rego.metadata.rule())] {
 	input.requestingUser.role == "ADMIN"
 }
 
+# METADATA
+# title: allow if less than 5 resources in the plan
+# description: approve automatically if the plan has less than 5 resources
+allow[format(rego.metadata.rule())] {
+	input.plan.planned_values.resources <= 5
+}
+
 format(meta) := meta.description
