@@ -1,4 +1,4 @@
-package env0.multipleApprovals
+package env0
 
 # METADATA
 # title: require 2 approvals
