@@ -6,6 +6,7 @@ package env0
 pending[format(rego.metadata.rule())] {
 	input.plan.planned_values.resources > 5
 	input.requestingUser.role != "ADMIN"
+	count(input.approvers) > 1
 }
 
 # METADATA
